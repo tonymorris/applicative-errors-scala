@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+    $LastChangedRevision: 1892 $
+    $LastChangedDate: 2010-02-13 19:17:58 +1000 (Sat, 13 Feb 2010) $
+-->
 
 <!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
-    "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
-    <!ENTITY % local.common.attrib
-               "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2001/XInclude'">
-]>
+    "http://www.oasis-open.org/docbook/xml/4.5CR1/docbookx.dtd">
 
-<article id="DocbookDocument" xmlns:xi="http://www.w3.org/2001/XInclude">
+<article xmlns:xi="http://www.w3.org/2001/XInclude">
   <xi:include href="articleinfo.xml"/>
-  <xi:include href="introduction.xml"/>
+  <xi:include href="Introduction.xml"/>
+  <xi:include href="ThisOrThat.xml"/>
+  <xi:include href="Example.xml"/>
+  <xi:include href="Applicative.xml"/>
+  <xi:include href="Semigroup.xml"/>
+  <xi:include href="PutItTogether.xml"/>
+  <xi:include href="RunIt.xml"/>
+  <xi:include href="Conclusion.xml"/>
+  <xi:include href="biblography.xml"/>
+  <xi:include href="Validation.scala.xml"/>
   <xi:include href="PGPKEY.xml"/>
   <xi:include href="CC-BY-SA.xml"/>
 </article>
