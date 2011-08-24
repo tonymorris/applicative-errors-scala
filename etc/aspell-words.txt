@@ -1,12 +1,16 @@
-personal_ws-1.1 en 28 
+personal_ws-1.1 en 36 
 organization
 waivable
 AUTHORIZED
 synching
 Ssection
+Scalaz
+functor
 phonogram
 sublicense
 Docbook
+BZZT
+scala
 recognizably
 Licence
 ShareAlike
@@ -16,14 +20,18 @@ NONINFRINGEMENT
 utilizing
 Unported
 PGP
+covariant
 Licensor's
 honor
+semigroup
 dramatico
 MERCHANTIBILITY
 CCPL
 relicensing
 WIPO
+semigroups
 synchronization
+functors
 Licensor
 Berne
 phonograms
