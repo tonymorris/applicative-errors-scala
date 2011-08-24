@@ -1,7 +1,7 @@
-Docbook Document
-================
+Applicative Programming, Disjoint Unions, Semigroups and Non-breaking Error Handling
+====================================================================================
 
-A template from which to create a Docbook document.
+Slides for a presentation on error handling.
 
 Setting up
 ==========
