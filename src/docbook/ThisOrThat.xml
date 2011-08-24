@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+    "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+
+<sect1 id="ThisOrThat" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>This or That</title>
+  <sect2>
+    <title>What is a disjoint union?</title>
+    <itemizedlist>
+      <listitem>
+        <para>
+          Sometimes we want to return <quote>this or that</quote>
+        </para>
+      </listitem>
+      <listitem>
+        <para>e.g. an exception or a return value</para>
+      </listitem>
+      <listitem>
+        <para>
+          We will call this a <emphasis>disjoint union</emphasis>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect2>
+  <sect2>
+    <title>Example</title>
+    <itemizedlist>
+      <listitem>
+        <para>
+          <code>scala.Either</code> (<emphasis>Scala</emphasis>)
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <code>Data.Either</code> (<emphasis>Haskell</emphasis>)
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <footnote>
+            <para><code>interface Func&lt;A, B> { B apply(A a); }</code></para>
+          </footnote>
+        <programlisting lang="Java">
+interface DisjointUnion&lt;A, B> {
+  &lt;X> X fold(Func&lt;A, X> left, Func&lt;B, X> right);          
+}</programlisting> (<emphasis>Java</emphasis>)
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect2>
+  <sect2>
+    <title>Validation</title>
+    <programlisting lang="Scala">
+sealed trait Validation[E, X]
+final case class Failure[E, X](e: E) extends Validation[E, X]
+final case class Success[E, X](x: X) extends Validation[E, X]</programlisting>
+  </sect2>
+</sect1>

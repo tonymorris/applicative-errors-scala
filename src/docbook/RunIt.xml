@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+    "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+
+<sect1 id="RunIt" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Let's Run It!</title>
+  <itemizedlist>
+    <listitem>
+<programlisting lang="Scala">
+$ scala Person 30 Fred 4000
+We have a person: Person(30,Fred,4000)</programlisting>
+    </listitem>
+    <listitem>
+<programlisting lang="Scala">
+$ scala Person "-7" red 490000
+Postcode must be 4 digits
+Name must begin with a capital letter
+Age must be greater than 0</programlisting>
+    </listitem>
+    <listitem>
+<programlisting lang="Scala">
+$ scala Person boo Fred 490000
+Postcode must be 4 digits
+java.lang.NumberFormatException: For input string: "boo"</programlisting>
+    </listitem>
+    <listitem>
+<programlisting lang="Scala">
+$ scala Person 30 "" 411x
+Postcode must be 4 digits
+Name must begin with a capital letter</programlisting>
+    </listitem>
+  </itemizedlist>
+</sect1>

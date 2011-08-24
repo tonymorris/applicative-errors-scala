@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+    "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+
+<sect1 id="Conclusion" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Conclusion</title>
+  <para>
+    Non-breaking error handling is just an applicative functor on a partially applied disjoint union type constructor
+    with semigroup error elements so what's the big deal?!
+  </para>
+  <para>
+    All this can even be done in Java's type system using <ulink url="http://functionaljava.org/">Functional Java</ulink>.
+  </para>
+  <para>
+    <ulink url="http://code.google.com/p/scalaz">Scalaz</ulink> uses this for <emphasis>web form field validation</emphasis>.
+  </para>
+</sect1>

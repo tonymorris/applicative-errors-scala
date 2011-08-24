@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+    "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+
+<sect1 id="Example" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Example</title>
+  <sect2>
+    <title>Person</title>
+    <itemizedlist>
+      <listitem>
+        <para>
+          <code>case class Person(age: Int, name: String, postcode: String)</code>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Age must be between 0 and 130
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Name must start with upper-case character
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Postcode must be 4 digits                              
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect2>
+  <sect2>
+    <title><code>validAge</code></title>
+    <programlisting lang="Scala">
+def validAge(s: String): Validation[List[String], Int] =
+    try {
+      val a = s.toInt
+      if(a &lt; 0)
+        Failure(List("Age must be greater than 0"))
+      else if(a > 130)
+        Failure(List("Age must be less than 130"))
+      else
+        Success(a)
+    } catch {
+      case e => Failure(List(e.toString))
+    }</programlisting>
+  </sect2>
+  <sect2>
+    <title><code>validName</code></title>
+    <programlisting lang="Scala">
+def validName(s: String): Validation[List[String], String] =
+    if(s.headOption exists (_.isUpper))
+      Success(s)
+    else
+      Failure(List("Name must begin with a capital letter"))</programlisting>
+  </sect2>
+  <sect2>
+    <title><code>validPostcode</code></title>
+    <programlisting lang="Scala">
+def validPostcode(s: String): Validation[List[String], String] =
+    if(s.length == 4 &amp;&amp; s.forall(_.isDigit))
+      Success(s)
+    else
+      Failure(List("Postcode must be 4 digits"))</programlisting>
+  </sect2>
+</sect1>

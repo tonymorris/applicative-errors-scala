@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+    "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+
+<sect1 id="PutItTogether" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Let's put it all together</title>
+  <sect2>
+    <title><code>Validation.map</code></title>
+    <programlisting lang="Scala">
+def map[Y](f: X => Y): Validation[E, Y]
+    = this match {
+    case Failure(e) => Failure(e)
+    case Success(x) => Success(f(x))
+  }</programlisting>
+  </sect2>
+  <sect2>
+    <title><code>Validation.&lt;&lt;*>></code></title>
+    <programlisting lang="Scala">
+def s&lt;&lt;*>>[Y](f: Validation[E, X => Y])
+            (implicit s: Semigroup[E]): Validation[E, Y]
+    = (this, f) match {
+      case (Failure(e1), Failure(e2)) => Failure(s append (e1, e2))
+      case (Failure(e1), Success(_))  => Failure(e1)
+      case (Success(_), Failure(e2))  => Failure(e2)
+      case (Success(x), Success(k))   => Success(k(x))
+    }</programlisting>
+  </sect2>
+  <sect2>
+    <title><code>main</code></title>
+    <programlisting lang="Scala">
+def main(args: Array[String]) {
+  if(args.length &lt; 3)
+    println("Need at least three arguments")
+  else {
+    val f = (Person(_, _, _)).curried
+    val age = validAge(args(0))
+    val name = validName(args(1))
+    val postcode = validPostcode(args(2))
+
+    postcode &lt;&lt;*>> (name &lt;&lt;*>> (age map f)) match {
+      case Success(p) => println("We have a person: " + p)
+      case Failure(e) => e foreach println
+    }
+  }
+}</programlisting>
+  </sect2>
+</sect1>

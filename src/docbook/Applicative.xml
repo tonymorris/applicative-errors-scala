@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+    "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+
+<sect1 id="Applicative" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>What is an applicative functor?</title>
+  <sect2>
+    <title>Applicative Functor</title>
+    <itemizedlist>
+      <listitem>
+        <para>
+          An applicative functor is any covariant pointed functor that also takes the form:
+          <code>M[A] => M[A => B] => M[B]</code>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          e.g. <code>List[A] => List[A => B] => List[B]</code>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect2>
+  <sect2>
+    <title>Validation Applicative Functor</title>
+    <itemizedlist>
+      <listitem>
+        <para>
+          <code>Validation[E, A] => Validation[E, A => B] => Validation[E, B]</code>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          If either fail, take the last error value
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          If both succeed, apply the function to the value and succeed
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          (?)But we want to accumulate error values
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect2>
+</sect1>

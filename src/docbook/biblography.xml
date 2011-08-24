@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE bibliography PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+    "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+
+<bibliography id="Bibliography" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <biblioentry id="ApplicativeProg">
+    <abbrev>ApplicativeProg</abbrev>
+    <author>
+      <firstname>
+        Conor
+      </firstname>
+      <surname>
+        McBride
+      </surname>
+    </author>
+    <author>
+      <firstname>
+        Ross
+      </firstname>
+      <surname>
+        Paterson
+      </surname>
+    </author>
+    <pubdate>
+      2008
+    </pubdate>
+    <title>
+      Applicative Programming with Effects
+    </title>
+  </biblioentry>
+</bibliography>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE abstract PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+    "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+
+<abstract id="Abstract" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <para>
+    This presentation is intended for the April 2010 meeting of the
+    <ulink url="http://www.meetup.com/Brisbane-Functional-Programming-Group-BFG/">Brisbane Functional Programming Group</ulink>
+  </para>
+  <para>
+    Programming with applicative functors <xref linkend="ApplicativeProg"/> generalises monadic programming permitting more available data types with fewer operations.
+    However, these operations are sufficient for general handling of functions which may fail to compute a result and instead produce
+    an error value. Further, these error values can be accumulated using an associative binary operation (semigroup).
+  </para>
+  <para>
+    This work is licensed under a Creative Commons Attribution-Share Alike 3.0 Unported License
+    <xref linkend="Licence"/>.
+  </para>
+  <para>
+    Questions and comments should be forwarded to <ulink url="mailto:code@tmorris.net">Tony Morris</ulink>
+    <xref linkend="PGPKEY"/>.
+  </para>
+</abstract>

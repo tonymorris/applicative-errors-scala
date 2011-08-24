@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+    "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+
+<sect1 id="Semigroup" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>What is a semigroup?</title>
+  <sect2>
+    <title>Semigroup</title>
+    <para>
+      A semigroup is a binary associative operation. For example,
+      <itemizedlist>
+        <listitem>
+          <para>
+            <code>+</code> addition
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <code>*</code> multiplication
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <code>List.append</code>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <code>-</code> subtraction <emphasis>BZZT! Subtraction is binary but not associative.</emphasis>  
+          </para>
+        </listitem>
+      </itemizedlist>
+    </para>
+  </sect2>
+  <sect2>
+    <title>Scala source</title>
+    <programlisting lang="Scala">
+trait Semigroup[A] {
+  def append(a1: A, a2: A): A
+}</programlisting>
+  </sect2>
+</sect1>
